@@ -84,23 +84,7 @@ class _OnboardingState extends State<Onboarding> {
               height: 20,
             ),
             GestureDetector(
-              child: Container(
-                margin: EdgeInsets.all(25),
-                height: 50,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(16),
-                    color: Theme.of(context).colorScheme.primaryContainer),
-                child: Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                      isfourthSlide ? "Get Started" : "Next",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500),
-                    )),
-              ),
+              child: 
             ),
           ],
         ),
