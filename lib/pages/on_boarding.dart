@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:namma_metro/components/My_Button.dart';
 import 'package:namma_metro/components/on_boarding_page_view.dart';
 import 'package:namma_metro/components/pageindicator.dart';
 
@@ -83,9 +84,7 @@ class _OnboardingState extends State<Onboarding> {
             SizedBox(
               height: 20,
             ),
-            GestureDetector(
-              child: 
-            ),
+            GestureDetector(child: MyButton(isfourthSlide: isfourthSlide)),
           ],
         ),
       )),
