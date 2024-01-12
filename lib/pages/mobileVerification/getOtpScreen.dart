@@ -1,6 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:namma_metro/components/verificationButton.dart';
+import 'package:namma_metro/components/verificationScreen.dart';
+import 'package:namma_metro/pages/mobileVerification/verifyOtpScreen.dart';
 
 class MobileVerificationScreen extends StatelessWidget {
   const MobileVerificationScreen({Key? key}) : super(key: key);
@@ -19,55 +22,10 @@ class MobileVerificationScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      const SizedBox(
-                        height: 150,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                            padding: EdgeInsets.all(20),
-                            height: 100,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Theme.of(context)
-                                  .colorScheme
-                                  .primaryContainer,
-                            ),
-                            child: Image.asset("lib/assets/smartphone.png"),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 30,
-                      ),
-                      Text(
-                        "Mobile Verification",
-                        style: TextStyle(
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold,
-                          color: Theme.of(context).colorScheme.primary,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 25,
-                      ),
-                      Text(
-                        "we will send you One Time Password ",
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w400,
-                          color: Theme.of(context).colorScheme.secondary,
-                        ),
-                      ),
-                      Text(
-                        "on this phone number",
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w400,
-                          color: Theme.of(context).colorScheme.secondary,
-                        ),
-                      ),
+                      VerificationScreen(
+                          heading: "Mobile Verification",
+                          part1: "we will send you One Time Password ",
+                          part2: "on this phone number"),
                       SizedBox(
                         height: 30,
                       ),
@@ -104,22 +62,7 @@ class MobileVerificationScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(25.0),
-              child: SizedBox(
-                height: 50,
-                width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: () {},
-                  child: Text("Get OTP"),
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(
-                      Theme.of(context).colorScheme.primaryContainer,
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            VerificationButton(widget: VerifyOtpScreen(), buttonText: "Get OTP")
           ],
         ),
       ),

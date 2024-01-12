@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:namma_metro/pages/mobileVerification/getOtpScreen.dart';
 
 class MyButton extends StatelessWidget {
   final int currentPage;
@@ -11,19 +12,26 @@ class MyButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return GestureDetector(
       onTap: () {
         if (currentPage < 3) {
           pageController.nextPage(
               duration: Duration(milliseconds: 500), curve: Curves.easeInOut);
-        } else {}
+        } else {
+          if (currentPage == 3) {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => MobileVerificationScreen()));
+          }
+        }
       },
       child: Container(
         margin: EdgeInsets.all(25),
         height: 50,
         width: double.infinity,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: BorderRadius.circular(6),
             color: Theme.of(context).colorScheme.primaryContainer),
         child: Align(
             alignment: Alignment.center,

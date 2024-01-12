@@ -92,13 +92,7 @@ class _OnboardingState extends State<Onboarding> {
             SizedBox(
               height: 20,
             ),
-            GestureDetector(
-              child: MyButton(
-                  currentPage: currentPage, pageController: controller),
-              onTap: () {
-                setState(() {});
-              },
-            ),
+            MyButton(currentPage: currentPage, pageController: controller),
           ],
         ),
       )),

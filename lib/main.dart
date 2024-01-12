@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:namma_metro/pages/mobileVerification/getOtpScreen.dart';
-import 'package:namma_metro/pages/on_boarding.dart';
+
+import 'package:namma_metro/pages/onBoarding/on_boarding.dart';
 import 'package:namma_metro/theme/light_mode.dart';
 
 void main() {
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: MobileVerificationScreen(),
+        home: Onboarding(),
         theme: lightMode);
   }
 }
