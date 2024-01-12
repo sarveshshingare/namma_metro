@@ -5,7 +5,7 @@ import 'package:namma_metro/components/My_Button.dart';
 import 'package:namma_metro/components/on_boarding_page_view.dart';
 import 'package:namma_metro/components/pageindicator.dart';
 
-// String buttonText = "Next";
+String buttonText = "Next";
 bool isfourthSlide = false;
 
 class Onboarding extends StatefulWidget {
@@ -17,6 +17,7 @@ class Onboarding extends StatefulWidget {
 
 class _OnboardingState extends State<Onboarding> {
   final PageController controller = PageController();
+  int currentPage = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -31,11 +32,18 @@ class _OnboardingState extends State<Onboarding> {
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Text(
-                  "Skip",
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Theme.of(context).colorScheme.secondary),
+                GestureDetector(
+                  onTap: () {
+                    controller.animateToPage(3,
+                        duration: Duration(milliseconds: 200),
+                        curve: Curves.bounceInOut);
+                  },
+                  child: Text(
+                    "Skip",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Theme.of(context).colorScheme.secondary),
+                  ),
                 ),
               ],
             ),
@@ -44,11 +52,11 @@ class _OnboardingState extends State<Onboarding> {
             ),
             Expanded(
               child: PageView(
-                onPageChanged: (value) {
-                  if (value == 3) {
-                    isfourthSlide = true;
-                    print(isfourthSlide);
-                  }
+                physics: BouncingScrollPhysics(),
+                onPageChanged: (index) {
+                  setState(() {
+                    currentPage = index;
+                  });
                 },
                 controller: controller,
                 children: [
@@ -84,7 +92,13 @@ class _OnboardingState extends State<Onboarding> {
             SizedBox(
               height: 20,
             ),
-            GestureDetector(child: MyButton(isfourthSlide: isfourthSlide)),
+            GestureDetector(
+              child: MyButton(
+                  currentPage: currentPage, pageController: controller),
+              onTap: () {
+                setState(() {});
+              },
+            ),
           ],
         ),
       )),
