@@ -1,6 +1,7 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:namma_metro/components/myTextfield.dart';
 import 'package:namma_metro/components/verificationButton.dart';
 import 'package:namma_metro/components/verificationScreen.dart';
 import 'package:namma_metro/pages/mobileVerification/verifyOtpScreen.dart';
@@ -29,30 +30,8 @@ class MobileVerificationScreen extends StatelessWidget {
                       SizedBox(
                         height: 30,
                       ),
-                      Container(
-                        height: 60,
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            width: 2,
-                            color: Theme.of(context)
-                                .colorScheme
-                                .primaryContainer
-                                .withOpacity(0.4),
-                          ),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Align(
-                          alignment: Alignment.bottomLeft,
-                          child: TextField(
-                            keyboardType: TextInputType.phone,
-                            textAlignVertical: TextAlignVertical.center,
-                            decoration: InputDecoration(
-                              prefixIcon: Icon(Icons.phone_android),
-                              hintText: "Enter Mobile Number",
-                              border: InputBorder.none,
-                            ),
-                          ),
-                        ),
+                      MyTextfield(
+                        hintText: 'Enter Mobile Number',
                       ),
                       SizedBox(
                         height: 100,
@@ -62,7 +41,16 @@ class MobileVerificationScreen extends StatelessWidget {
                 ),
               ),
             ),
-            VerificationButton(widget: VerifyOtpScreen(), buttonText: "Get OTP")
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: VerificationButton(
+                widget: VerifyOtpScreen(),
+                buttonText: "Get OTP",
+                width: double.infinity,
+                bgcolor: Theme.of(context).colorScheme.primaryContainer,
+                fgcolor: Theme.of(context).colorScheme.background,
+              ),
+            )
           ],
         ),
       ),

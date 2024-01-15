@@ -1,6 +1,10 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:namma_metro/components/myTextfield.dart';
+import 'package:namma_metro/components/verificationButton.dart';
+import 'package:namma_metro/homescreen/homeScreen.dart';
+import 'package:namma_metro/pages/mobileVerification/verifyOtpScreen.dart';
 
 class Register extends StatelessWidget {
   const Register({Key? key}) : super(key: key);
@@ -10,14 +14,70 @@ class Register extends StatelessWidget {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Center(
-                  child: Container(
-                      height: 200, child: Image.asset("lib/assets/otp.jpg"),),),
-            ],
-          ),
+        child: Column(
+          children: [
+            Expanded(
+              child: SingleChildScrollView(
+                child: Padding(
+                  padding: const EdgeInsets.all(25.0),
+                  child: Column(
+                    children: [
+                      Center(
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              height: 50,
+                            ),
+                            Container(
+                              height: 100,
+                              child: Image.asset("lib/assets/logo.png"),
+                            ),
+                            Text(
+                              "7045879685",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Theme.of(context).colorScheme.primary,
+                                  fontSize: 24),
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 80,
+                      ),
+                      MyTextfield(hintText: "Name"),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      MyTextfield(hintText: "Email Id")
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                VerificationButton(
+                  widget: HomeScreen(),
+                  buttonText: "Save",
+                  width: 150,
+                  bgcolor: Theme.of(context).colorScheme.primaryContainer,
+                  fgcolor: Theme.of(context).colorScheme.background,
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                VerificationButton(
+                  widget: HomeScreen(),
+                  buttonText: "Close",
+                  width: 150,
+                  bgcolor: Theme.of(context).colorScheme.background,
+                  fgcolor: Theme.of(context).colorScheme.primaryContainer,
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );
