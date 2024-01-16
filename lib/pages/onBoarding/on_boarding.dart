@@ -35,7 +35,7 @@ class _OnboardingState extends State<Onboarding> {
                 GestureDetector(
                   onTap: () {
                     controller.animateToPage(3,
-                        duration: Duration(milliseconds: 200),
+                        duration: Duration(milliseconds: 100),
                         curve: Curves.bounceInOut);
                   },
                   child: Text(

@@ -16,7 +16,7 @@ class MyButton extends StatelessWidget {
       onTap: () {
         if (currentPage < 3) {
           pageController.nextPage(
-              duration: Duration(milliseconds: 500), curve: Curves.easeInOut);
+              duration: Duration(milliseconds: 100), curve: Curves.easeInOut);
         } else {
           if (currentPage == 3) {
             Navigator.push(
