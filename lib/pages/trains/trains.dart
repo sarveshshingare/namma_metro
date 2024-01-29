@@ -1,6 +1,7 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:namma_metro/components/checkTrains.dart';
 import 'package:namma_metro/components/verificationButton.dart';
 
 class Trains extends StatelessWidget {
@@ -25,6 +26,7 @@ class Trains extends StatelessWidget {
           child: Padding(
         padding: const EdgeInsets.all(25.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               "Select Date & Time",
@@ -32,9 +34,6 @@ class Trains extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   color: Theme.of(context).colorScheme.primary,
                   fontSize: 16),
-            ),
-            SizedBox(
-              height: 20,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -52,14 +51,19 @@ class Trains extends StatelessWidget {
                 VerificationButton(
                     myicon: Icons.timer_outlined,
                     widget: Trains(),
-                    buttonText: "21/03/2024",
+                    buttonText: "11 : 52 AM",
                     width: 150,
                     bgcolor: Theme.of(context).colorScheme.background,
                     fgcolor: Theme.of(context).colorScheme.primaryContainer),
               ],
             ),
-            SizedBox(
-              width: 20,
+            Expanded(
+              child: ListView.builder(
+                itemCount: 4,
+                itemBuilder: (BuildContext context, int index) {
+                  return CheckTrains();
+                },
+              ),
             ),
           ],
         ),
