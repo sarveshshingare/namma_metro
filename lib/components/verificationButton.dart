@@ -8,13 +8,15 @@ class VerificationButton extends StatelessWidget {
   final double width;
   final Color bgcolor;
   final Color fgcolor;
+  final IconData? myicon;
   const VerificationButton(
       {Key? key,
       required this.widget,
       required this.buttonText,
       required this.width,
       required this.bgcolor,
-      required this.fgcolor})
+      required this.fgcolor,
+      this.myicon})
       : super(key: key);
 
   @override
@@ -48,7 +50,15 @@ class VerificationButton extends StatelessWidget {
               ),
             ),
           ),
-          child: Text(buttonText),
+          child: Row(
+            children: [
+              Icon(myicon),
+              SizedBox(
+                width: 10,
+              ),
+              Text(buttonText),
+            ],
+          ),
         ),
       ),
     );

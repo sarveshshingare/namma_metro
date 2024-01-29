@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:namma_metro/components/myTextfield.dart';
 import 'package:namma_metro/components/verificationButton.dart';
-import 'package:namma_metro/homescreen/homeScreen.dart';
+import 'package:namma_metro/pages/homescreen/homeScreen.dart';
 import 'package:namma_metro/pages/mobileVerification/verifyOtpScreen.dart';
 
 class Register extends StatelessWidget {
