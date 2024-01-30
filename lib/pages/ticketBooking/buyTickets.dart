@@ -146,9 +146,11 @@ class buyTickets extends StatelessWidget {
               ),
             ),
             VerificationButton(
-                widget: confirmation(),isIcon: false,
+                widget: ticketBooking(),
+                isIcon: false,
                 buttonText: "Buy Ticket ",
-                width: 200,isoneSidedPadding: false,
+                width: 200,
+                isoneSidedPadding: false,
                 bgcolor: Theme.of(context).colorScheme.primaryContainer,
                 fgcolor: Theme.of(context).colorScheme.background)
           ],

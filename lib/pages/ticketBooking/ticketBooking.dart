@@ -6,6 +6,7 @@ import 'package:namma_metro/components/fromTo.dart';
 import 'package:namma_metro/components/myseprator.dart';
 import 'package:namma_metro/components/normalElevatedButton.dart';
 import 'package:namma_metro/components/verificationButton.dart';
+import 'package:namma_metro/pages/ticketBooking/confirmation.dart';
 
 class ticketBooking extends StatelessWidget {
   const ticketBooking({Key? key}) : super(key: key);
@@ -45,7 +46,9 @@ class ticketBooking extends StatelessWidget {
                         children: [
                           VerificationButton(
                               widget: ticketBooking(),
-                              buttonText: "One Way",isIcon: false,isoneSidedPadding: false,
+                              buttonText: "One Way",
+                              isIcon: false,
+                              isoneSidedPadding: false,
                               width: 165,
                               bgcolor: Theme.of(context)
                                   .colorScheme
@@ -54,7 +57,9 @@ class ticketBooking extends StatelessWidget {
                                   Theme.of(context).colorScheme.background),
                           VerificationButton(
                               widget: ticketBooking(),
-                              buttonText: "One Way",isIcon: false,isoneSidedPadding: false,
+                              buttonText: "One Way",
+                              isIcon: false,
+                              isoneSidedPadding: false,
                               width: 165,
                               bgcolor: Theme.of(context).colorScheme.background,
                               fgcolor: Theme.of(context)
@@ -138,16 +143,17 @@ class ticketBooking extends StatelessWidget {
                         height: 5,
                       ),
                       Text(
-                        "\$ 17",
+                        "\$ 15",
                         style: TextStyle(
                             fontSize: 16, fontWeight: FontWeight.w500),
                       )
                     ],
                   ),
                   VerificationButton(
-                    isIcon: false,
-                      widget: ticketBooking(),
-                      buttonText: "Buy Ticket ",isoneSidedPadding: false,
+                      isIcon: false,
+                      widget: confirmation(),
+                      buttonText: "Buy Ticket ",
+                      isoneSidedPadding: false,
                       width: 200,
                       bgcolor: Theme.of(context).colorScheme.primaryContainer,
                       fgcolor: Theme.of(context).colorScheme.background),

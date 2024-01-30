@@ -1,9 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:namma_metro/components/confirmationTicket.dart';
 import 'package:namma_metro/components/verificationButton.dart';
-import 'package:namma_metro/pages/ticketBooking/ticketBooking.dart';
+import 'package:namma_metro/pages/ticketBooking/paymentSuccesfull.dart';
 
 class paymentMethod extends StatelessWidget {
   const paymentMethod({Key? key}) : super(key: key);
@@ -34,7 +33,7 @@ class paymentMethod extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       VerificationButton(
-                          widget: paymentMethod(),
+                          widget: paymentSuccessful(),
                           isoneSidedPadding: true,
                           buttonText: "Payment Amount : 17 ₹",
                           width: MediaQuery.of(context).size.width,
@@ -43,7 +42,7 @@ class paymentMethod extends StatelessWidget {
                               Theme.of(context).colorScheme.primaryContainer,
                           fgcolor: Theme.of(context).colorScheme.background),
                       VerificationButton(
-                          widget: paymentMethod(),
+                          widget: paymentSuccessful(),
                           buttonText: "Quick Pay",
                           width: MediaQuery.of(context).size.width,
                           isoneSidedPadding: true,
@@ -52,7 +51,7 @@ class paymentMethod extends StatelessWidget {
                           fgcolor:
                               Theme.of(context).colorScheme.primaryContainer),
                       VerificationButton(
-                          widget: paymentMethod(),
+                          widget: paymentSuccessful(),
                           buttonText: "Credit Card",
                           width: MediaQuery.of(context).size.width,
                           isoneSidedPadding: true,
@@ -61,7 +60,7 @@ class paymentMethod extends StatelessWidget {
                           fgcolor:
                               Theme.of(context).colorScheme.primaryContainer),
                       VerificationButton(
-                          widget: paymentMethod(),
+                          widget: paymentSuccessful(),
                           buttonText: "Debit Card",
                           width: MediaQuery.of(context).size.width,
                           isIcon: false,
@@ -70,7 +69,7 @@ class paymentMethod extends StatelessWidget {
                           fgcolor:
                               Theme.of(context).colorScheme.primaryContainer),
                       VerificationButton(
-                          widget: paymentMethod(),
+                          widget: paymentSuccessful(),
                           buttonText: "Internet Banking",
                           width: MediaQuery.of(context).size.width,
                           isoneSidedPadding: true,
@@ -79,7 +78,7 @@ class paymentMethod extends StatelessWidget {
                           fgcolor:
                               Theme.of(context).colorScheme.primaryContainer),
                       VerificationButton(
-                          widget: paymentMethod(),
+                          widget: paymentSuccessful(),
                           buttonText: "Wallet",
                           width: MediaQuery.of(context).size.width,
                           isoneSidedPadding: true,
@@ -88,7 +87,7 @@ class paymentMethod extends StatelessWidget {
                           fgcolor:
                               Theme.of(context).colorScheme.primaryContainer),
                       VerificationButton(
-                          widget: paymentMethod(),
+                          widget: paymentSuccessful(),
                           buttonText: "UPI",
                           width: MediaQuery.of(context).size.width,
                           isIcon: false,

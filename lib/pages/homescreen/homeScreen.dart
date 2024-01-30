@@ -107,22 +107,27 @@ class _HomeScreenState extends State<HomeScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     VerificationButton(
-                        widget: Trains(),
-                        myicon: Icons.search,
-                        buttonText: "Check Trains",
-                        width: MediaQuery.of(context).size.width * 0.4,
-                        bgcolor: Theme.of(context).colorScheme.primaryContainer,
-                        fgcolor: Theme.of(context).colorScheme.background, isIcon: true, isoneSidedPadding: false,),
+                      widget: Trains(),
+                      myicon: Icons.search,
+                      buttonText: "Check Trains",
+                      width: MediaQuery.of(context).size.width * 0.4,
+                      bgcolor: Theme.of(context).colorScheme.primaryContainer,
+                      fgcolor: Theme.of(context).colorScheme.background,
+                      isIcon: true,
+                      isoneSidedPadding: false,
+                    ),
                     SizedBox(
                       width: 10,
                     ),
                     VerificationButton(
-                        widget: HomeScreen(),
-                        buttonText: "Check Trains",
-                        width: MediaQuery.of(context).size.width * 0.4,isoneSidedPadding: false,
-                        bgcolor: Theme.of(context).colorScheme.background,
-                        fgcolor:
-                            Theme.of(context).colorScheme.primaryContainer, isIcon: false,),
+                      widget: HomeScreen(),
+                      buttonText: "Check Trains",
+                      width: MediaQuery.of(context).size.width * 0.4,
+                      isoneSidedPadding: false,
+                      bgcolor: Theme.of(context).colorScheme.background,
+                      fgcolor: Theme.of(context).colorScheme.primaryContainer,
+                      isIcon: false,
+                    ),
                   ],
                 ),
               ),
@@ -145,25 +150,35 @@ class _HomeScreenState extends State<HomeScreen> {
                   itemBuilder: (BuildContext context, int index) {
                     return Padding(
                       padding: const EdgeInsets.all(0.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            height: 40,
-                            width: 40,
-                            decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: AssetImage(
-                                        "${gridviewMap.elementAt(index)['path']}"))),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            "${gridviewMap.elementAt(index)['title']}",
-                            textAlign: TextAlign.center,
-                          )
-                        ],
+                      child: GestureDetector(
+                        onTap: () {
+                          if (index == 1) {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => HomeScreen()));
+                          }
+                        },
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(
+                              height: 40,
+                              width: 40,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          "${gridviewMap.elementAt(index)['path']}"))),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "${gridviewMap.elementAt(index)['title']}",
+                              textAlign: TextAlign.center,
+                            )
+                          ],
+                        ),
                       ),
                     );
                   },
