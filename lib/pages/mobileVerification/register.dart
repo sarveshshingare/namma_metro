@@ -62,6 +62,7 @@ class Register extends StatelessWidget {
                   widget: HomeScreen(),
                   buttonText: "Save",
                   width: 150,
+                  isIcon: false,isoneSidedPadding: false,
                   bgcolor: Theme.of(context).colorScheme.primaryContainer,
                   fgcolor: Theme.of(context).colorScheme.background,
                 ),
@@ -70,6 +71,7 @@ class Register extends StatelessWidget {
                 ),
                 VerificationButton(
                   widget: HomeScreen(),
+                  isIcon: false,isoneSidedPadding: false,
                   buttonText: "Close",
                   width: 150,
                   bgcolor: Theme.of(context).colorScheme.background,

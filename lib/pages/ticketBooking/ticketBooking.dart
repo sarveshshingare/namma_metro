@@ -45,7 +45,7 @@ class ticketBooking extends StatelessWidget {
                         children: [
                           VerificationButton(
                               widget: ticketBooking(),
-                              buttonText: "One Way",
+                              buttonText: "One Way",isIcon: false,isoneSidedPadding: false,
                               width: 165,
                               bgcolor: Theme.of(context)
                                   .colorScheme
@@ -54,7 +54,7 @@ class ticketBooking extends StatelessWidget {
                                   Theme.of(context).colorScheme.background),
                           VerificationButton(
                               widget: ticketBooking(),
-                              buttonText: "One Way",
+                              buttonText: "One Way",isIcon: false,isoneSidedPadding: false,
                               width: 165,
                               bgcolor: Theme.of(context).colorScheme.background,
                               fgcolor: Theme.of(context)
@@ -145,8 +145,9 @@ class ticketBooking extends StatelessWidget {
                     ],
                   ),
                   VerificationButton(
+                    isIcon: false,
                       widget: ticketBooking(),
-                      buttonText: "Buy Ticket ",
+                      buttonText: "Buy Ticket ",isoneSidedPadding: false,
                       width: 200,
                       bgcolor: Theme.of(context).colorScheme.primaryContainer,
                       fgcolor: Theme.of(context).colorScheme.background),

@@ -41,7 +41,8 @@ class Trains extends StatelessWidget {
                 VerificationButton(
                     myicon: Icons.calendar_month_outlined,
                     widget: Trains(),
-                    buttonText: "21/03/2024",
+                    buttonText: "21/03/2024",isoneSidedPadding: false,
+                    isIcon: false,
                     width: 150,
                     bgcolor: Theme.of(context).colorScheme.primaryContainer,
                     fgcolor: Theme.of(context).colorScheme.background),
@@ -50,7 +51,8 @@ class Trains extends StatelessWidget {
                 ),
                 VerificationButton(
                     myicon: Icons.timer_outlined,
-                    widget: Trains(),
+                    widget: Trains(),isoneSidedPadding: false,
+                    isIcon: true,
                     buttonText: "11 : 52 AM",
                     width: 150,
                     bgcolor: Theme.of(context).colorScheme.background,

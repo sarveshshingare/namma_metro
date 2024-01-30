@@ -45,10 +45,10 @@ class MobileVerificationScreen extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
               child: VerificationButton(
                 widget: VerifyOtpScreen(),
-                buttonText: "Get OTP",
+                buttonText: "Get OTP",isoneSidedPadding: false,
                 width: double.infinity,
                 bgcolor: Theme.of(context).colorScheme.primaryContainer,
-                fgcolor: Theme.of(context).colorScheme.background,
+                fgcolor: Theme.of(context).colorScheme.background, isIcon: false,
               ),
             )
           ],

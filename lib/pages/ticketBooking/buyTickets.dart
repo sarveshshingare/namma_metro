@@ -5,6 +5,7 @@ import 'package:namma_metro/components/checkTrains.dart';
 import 'package:namma_metro/components/fromTo.dart';
 import 'package:namma_metro/components/normalElevatedButton.dart';
 import 'package:namma_metro/components/verificationButton.dart';
+import 'package:namma_metro/pages/ticketBooking/confirmation.dart';
 import 'package:namma_metro/pages/ticketBooking/ticketBooking.dart';
 
 class buyTickets extends StatelessWidget {
@@ -145,9 +146,9 @@ class buyTickets extends StatelessWidget {
               ),
             ),
             VerificationButton(
-                widget: ticketBooking(),
+                widget: confirmation(),isIcon: false,
                 buttonText: "Buy Ticket ",
-                width: 200,
+                width: 200,isoneSidedPadding: false,
                 bgcolor: Theme.of(context).colorScheme.primaryContainer,
                 fgcolor: Theme.of(context).colorScheme.background)
           ],

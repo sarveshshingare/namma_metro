@@ -112,17 +112,17 @@ class _HomeScreenState extends State<HomeScreen> {
                         buttonText: "Check Trains",
                         width: MediaQuery.of(context).size.width * 0.4,
                         bgcolor: Theme.of(context).colorScheme.primaryContainer,
-                        fgcolor: Theme.of(context).colorScheme.background),
+                        fgcolor: Theme.of(context).colorScheme.background, isIcon: true, isoneSidedPadding: false,),
                     SizedBox(
                       width: 10,
                     ),
                     VerificationButton(
                         widget: HomeScreen(),
                         buttonText: "Check Trains",
-                        width: MediaQuery.of(context).size.width * 0.4,
+                        width: MediaQuery.of(context).size.width * 0.4,isoneSidedPadding: false,
                         bgcolor: Theme.of(context).colorScheme.background,
                         fgcolor:
-                            Theme.of(context).colorScheme.primaryContainer),
+                            Theme.of(context).colorScheme.primaryContainer, isIcon: false,),
                   ],
                 ),
               ),

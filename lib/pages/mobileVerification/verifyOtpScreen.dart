@@ -65,9 +65,9 @@ class VerifyOtpScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
               child: VerificationButton(
-                widget: Register(),
+                widget: Register(),isIcon: false,
                 buttonText: "Verify",
-                width: double.infinity,
+                width: double.infinity,isoneSidedPadding: false,
                 bgcolor: Theme.of(context).colorScheme.primaryContainer,
                 fgcolor: Theme.of(context).colorScheme.background,
               ),
