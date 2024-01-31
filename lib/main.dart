@@ -4,7 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:namma_metro/firebase_options.dart';
 
-import 'package:namma_metro/pages/onBoarding/on_boarding.dart';
+import 'package:namma_metro/features/onBoarding/on_boarding.dart';
 import 'package:namma_metro/theme/light_mode.dart';
 
 void main() {

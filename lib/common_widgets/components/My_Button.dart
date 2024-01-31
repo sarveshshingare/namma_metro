@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:namma_metro/pages/mobileVerification/getOtpScreen.dart';
+import 'package:namma_metro/features/authentication/screens/getOtpScreen.dart';
 
 class MyButton extends StatelessWidget {
   final int currentPage;

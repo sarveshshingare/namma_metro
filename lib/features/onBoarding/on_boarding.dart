@@ -1,9 +1,9 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:namma_metro/components/My_Button.dart';
-import 'package:namma_metro/components/on_boarding_page_view.dart';
-import 'package:namma_metro/components/pageindicator.dart';
+import 'package:namma_metro/common_widgets/components/My_Button.dart';
+import 'package:namma_metro/common_widgets/components/on_boarding_page_view.dart';
+import 'package:namma_metro/common_widgets/components/pageindicator.dart';
 
 String buttonText = "Next";
 bool isfourthSlide = false;

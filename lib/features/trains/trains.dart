@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:namma_metro/components/checkTrains.dart';
-import 'package:namma_metro/components/verificationButton.dart';
+import 'package:namma_metro/common_widgets/components/checkTrains.dart';
+import 'package:namma_metro/common_widgets/components/verificationButton.dart';
 
 class Trains extends StatelessWidget {
   const Trains({Key? key}) : super(key: key);

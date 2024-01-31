@@ -1,12 +1,12 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:namma_metro/components/checkTrains.dart';
-import 'package:namma_metro/components/fromTo.dart';
-import 'package:namma_metro/components/normalElevatedButton.dart';
-import 'package:namma_metro/components/verificationButton.dart';
-import 'package:namma_metro/pages/ticketBooking/confirmation.dart';
-import 'package:namma_metro/pages/ticketBooking/ticketBooking.dart';
+import 'package:namma_metro/common_widgets/components/checkTrains.dart';
+import 'package:namma_metro/common_widgets/components/fromTo.dart';
+import 'package:namma_metro/common_widgets/components/normalElevatedButton.dart';
+import 'package:namma_metro/common_widgets/components/verificationButton.dart';
+import 'package:namma_metro/features/ticketBooking/confirmation.dart';
+import 'package:namma_metro/features/ticketBooking/ticketBooking.dart';
 
 class buyTickets extends StatelessWidget {
   const buyTickets({Key? key}) : super(key: key);

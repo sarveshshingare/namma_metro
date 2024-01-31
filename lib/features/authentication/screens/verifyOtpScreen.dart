@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
-import 'package:namma_metro/components/verificationButton.dart';
-import 'package:namma_metro/components/verificationScreen.dart';
-import 'package:namma_metro/pages/mobileVerification/register.dart';
+import 'package:namma_metro/common_widgets/components/verificationButton.dart';
+import 'package:namma_metro/common_widgets/components/verificationScreen.dart';
+import 'package:namma_metro/features/authentication/register.dart';
 import 'package:otp_text_field/otp_field.dart';
 import 'package:otp_text_field/style.dart';
 

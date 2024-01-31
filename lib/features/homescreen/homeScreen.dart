@@ -1,9 +1,9 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:namma_metro/components/myDropDownList.dart';
-import 'package:namma_metro/components/verificationButton.dart';
-import 'package:namma_metro/pages/trains/trains.dart';
+import 'package:namma_metro/common_widgets/components/myDropDownList.dart';
+import 'package:namma_metro/common_widgets/components/verificationButton.dart';
+import 'package:namma_metro/features/trains/trains.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key? key}) : super(key: key);

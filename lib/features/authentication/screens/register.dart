@@ -1,10 +1,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:namma_metro/components/myTextfield.dart';
-import 'package:namma_metro/components/verificationButton.dart';
-import 'package:namma_metro/pages/homescreen/homeScreen.dart';
-import 'package:namma_metro/pages/mobileVerification/verifyOtpScreen.dart';
+import 'package:namma_metro/common_widgets/components/myTextfield.dart';
+import 'package:namma_metro/common_widgets/components/verificationButton.dart';
+import 'package:namma_metro/features/homescreen/homeScreen.dart';
+import 'package:namma_metro/features/authentication/verifyOtpScreen.dart';
 
 class Register extends StatelessWidget {
   const Register({Key? key}) : super(key: key);

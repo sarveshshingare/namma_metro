@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:namma_metro/pages/ticketBooking/buyTickets.dart';
+import 'package:namma_metro/features/ticketBooking/buyTickets.dart';
 
 class CheckTrains extends StatelessWidget {
   const CheckTrains({Key? key}) : super(key: key);

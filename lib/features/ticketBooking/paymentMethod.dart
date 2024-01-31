@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:namma_metro/components/verificationButton.dart';
-import 'package:namma_metro/pages/ticketBooking/paymentSuccesfull.dart';
+import 'package:namma_metro/common_widgets/components/verificationButton.dart';
+import 'package:namma_metro/features/ticketBooking/paymentSuccesfull.dart';
 
 class paymentMethod extends StatelessWidget {
   const paymentMethod({Key? key}) : super(key: key);

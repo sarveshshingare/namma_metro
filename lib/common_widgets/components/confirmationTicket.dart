@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:namma_metro/components/myseprator.dart';
+import 'package:namma_metro/common_widgets/components/myseprator.dart';
 
 class ConfirmationTicket extends StatelessWidget {
   const ConfirmationTicket({Key? key}) : super(key: key);

@@ -1,10 +1,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:namma_metro/components/confirmationTicket.dart';
-import 'package:namma_metro/components/verificationButton.dart';
-import 'package:namma_metro/pages/ticketBooking/paymentMethod.dart';
-import 'package:namma_metro/pages/ticketBooking/ticketBooking.dart';
+import 'package:namma_metro/common_widgets/components/confirmationTicket.dart';
+import 'package:namma_metro/common_widgets/components/verificationButton.dart';
+import 'package:namma_metro/features/ticketBooking/paymentMethod.dart';
+import 'package:namma_metro/features/ticketBooking/ticketBooking.dart';
 
 class confirmation extends StatelessWidget {
   const confirmation({Key? key}) : super(key: key);
