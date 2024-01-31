@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:namma_metro/components/verificationButton.dart';
 import 'package:namma_metro/pages/homescreen/homeScreen.dart';
-import 'package:namma_metro/pages/ticketBooking/ticketBooking.dart';
+
 import 'package:qr_flutter/qr_flutter.dart';
 
 class paymentSuccessful extends StatelessWidget {
@@ -86,7 +86,7 @@ class paymentSuccessful extends StatelessWidget {
                         height: 20,
                       ),
                       QrImageView(
-                        data: "This project is done by sarvesh and team",
+                        data: "oankjajsjkandknsakjdnas",
                         version: QrVersions.auto,
                         size: 200,
                       )

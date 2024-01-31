@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyD_c0Mo8HPVFUA296k_S6b2ZF1hapKBbvk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>740755234860</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.nammaMetro.RunnerTests</string>
+	<key>PROJECT_ID</key>
+	<string>namametro-e92ed</string>
+	<key>STORAGE_BUCKET</key>
+	<string>namametro-e92ed.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:740755234860:ios:e8e7982eed5563f0e8b189</string>
+</dict>
+</plist>
