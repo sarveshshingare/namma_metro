@@ -19,6 +19,30 @@ class _OnboardingState extends State<Onboarding> {
   final PageController controller = PageController();
   int currentPage = 0;
 
+
+/*
+
+late SharedPreferences _prefs;
+  late bool _isFirstTime
+
+@override
+  void initState() {
+    super.initState();
+    _initPrefs();
+  }
+
+Future<void> _initPrefs() async {
+    _prefs = await SharedPreferences.getInstance();
+    _isFirstTime = _prefs.getBool('isFirstTime') ?? true;
+    if (_isFirstTime) {
+      // Mark onboarding as completed
+      _prefs.setBool('isFirstTime', false);
+    }
+    setState(() {}); // Rebuild the widget to reflect changes
+  }
+
+
+*/
   @override
   Widget build(BuildContext context) {
     return Scaffold(
