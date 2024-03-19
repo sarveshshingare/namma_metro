@@ -10,13 +10,22 @@ class MyDropDownList extends StatefulWidget {
 }
 
 class _MyDropDownListState extends State<MyDropDownList> {
-  String dropDownValue = "item 1";
+  String dropDownValue = "Select Your Station";
   var items = [
-    'item 1',
-    'item 2',
-    'item 3',
-    'item 4',
-    'item 5',
+    'Select Your Station',
+    'PCMC',
+    'SANT TUKARAM NAGAR',
+    'BHOSARI',
+    'KASARWADI',
+    'PHUGEWADI',
+    'DAPODI',
+    'SHIVAJINAGAR',
+    'CIVIL COURT',
+    'VANAZ',
+    'ANAD NAGAR',
+    'IDEAL COLONY',
+    'NAL STOP',
+    'DECCAN'
   ];
   @override
   Widget build(BuildContext context) {
@@ -31,7 +40,7 @@ class _MyDropDownListState extends State<MyDropDownList> {
             border: InputBorder.none,
             prefixIcon: Icon(Icons.location_on_sharp),
             suffix: SizedBox(
-              width: 60,
+              width: 20,
             )),
         value: dropDownValue,
         icon: const Icon(Icons.keyboard_arrow_down),

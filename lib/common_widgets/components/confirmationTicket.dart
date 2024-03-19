@@ -9,7 +9,7 @@ class ConfirmationTicket extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(18),
+      padding: EdgeInsets.all(16),
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
           border: Border.all(width: 1), borderRadius: BorderRadius.circular(8)),
@@ -21,12 +21,12 @@ class ConfirmationTicket extends StatelessWidget {
               Text(
                 "No. Of Tickets",
                 style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 16,
                     fontWeight: FontWeight.w500,
                     color: Theme.of(context).colorScheme.primary),
               ),
               Text("1",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
             ],
           ),
           SizedBox(
@@ -38,12 +38,12 @@ class ConfirmationTicket extends StatelessWidget {
               Text(
                 "Journey Type",
                 style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 16,
                     fontWeight: FontWeight.w500,
                     color: Theme.of(context).colorScheme.primary),
               ),
               Text("Single Trip",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
             ],
           ),
           SizedBox(
@@ -55,12 +55,12 @@ class ConfirmationTicket extends StatelessWidget {
               Text(
                 "Date of Journey",
                 style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 16,
                     fontWeight: FontWeight.w500,
                     color: Theme.of(context).colorScheme.primary),
               ),
               Text("21, March, Sunday",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
             ],
           ),
           SizedBox(
@@ -76,12 +76,12 @@ class ConfirmationTicket extends StatelessWidget {
               Text(
                 "Total Amount",
                 style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 16,
                     fontWeight: FontWeight.w500,
                     color: Theme.of(context).colorScheme.primary),
               ),
-              Text("\$ 17",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+              Text("₹ 15",
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
             ],
           ),
         ],

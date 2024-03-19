@@ -13,7 +13,7 @@ class NormalElevatedButton extends StatelessWidget {
       style: ButtonStyle(
           backgroundColor: MaterialStatePropertyAll(
               Theme.of(context).colorScheme.primaryContainer),
-          minimumSize: MaterialStatePropertyAll(Size(100, 30))),
+          minimumSize: const MaterialStatePropertyAll(Size(80, 30))),
     );
   }
 }

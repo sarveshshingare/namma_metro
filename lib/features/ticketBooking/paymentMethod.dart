@@ -35,7 +35,7 @@ class paymentMethod extends StatelessWidget {
                       VerificationButton(
                           widget: paymentSuccessful(),
                           isoneSidedPadding: true,
-                          buttonText: "Payment Amount : 17 ₹",
+                          buttonText: "Payment Amount : 15 ₹",
                           width: MediaQuery.of(context).size.width,
                           isIcon: false,
                           bgcolor:

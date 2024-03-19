@@ -62,11 +62,17 @@ class VerificationButton extends StatelessWidget {
               isIcon
                   ? Row(
                       children: [
-                        Icon(myicon),
+                        Icon(
+                          myicon,
+                          color: fgcolor,
+                        ),
                         SizedBox(
                           width: 10,
                         ),
-                        Text(buttonText),
+                        Text(
+                          buttonText,
+                          style: TextStyle(fontSize: 14, color: fgcolor),
+                        ),
                       ],
                     )
                   : Row(
@@ -76,7 +82,7 @@ class VerificationButton extends StatelessWidget {
                         ),
                         Text(
                           buttonText,
-                          style: TextStyle(fontSize: 16),
+                          style: TextStyle(fontSize: 14, color: fgcolor),
                         ),
                       ],
                     ),

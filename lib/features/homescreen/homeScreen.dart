@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:namma_metro/common_widgets/components/myDropDownList.dart';
 import 'package:namma_metro/common_widgets/components/verificationButton.dart';
+import 'package:namma_metro/features/ticketBooking/paymentSuccesfull.dart';
 import 'package:namma_metro/features/trains/trains.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -100,11 +101,11 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               MyDropDownList(),
               SizedBox(
-                height: 10,
+                height: 20,
               ),
               Flexible(
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     VerificationButton(
                       widget: Trains(),
@@ -113,17 +114,18 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: MediaQuery.of(context).size.width * 0.4,
                       bgcolor: Theme.of(context).colorScheme.primaryContainer,
                       fgcolor: Theme.of(context).colorScheme.background,
-                      isIcon: true,
-                      isoneSidedPadding: false,
+                      isIcon: false,
+                      isoneSidedPadding: true,
                     ),
                     SizedBox(
                       width: 10,
                     ),
                     VerificationButton(
                       widget: HomeScreen(),
-                      buttonText: "Check Trains",
+                      myicon: Icons.access_time_rounded,
+                      buttonText: "All Searches",
                       width: MediaQuery.of(context).size.width * 0.4,
-                      isoneSidedPadding: false,
+                      isoneSidedPadding: true,
                       bgcolor: Theme.of(context).colorScheme.background,
                       fgcolor: Theme.of(context).colorScheme.primaryContainer,
                       isIcon: false,
@@ -156,7 +158,12 @@ class _HomeScreenState extends State<HomeScreen> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => HomeScreen()));
+                                    builder: (context) => paymentSuccessful()));
+                          } else if (index == 0) {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Trains()));
                           }
                         },
                         child: Column(

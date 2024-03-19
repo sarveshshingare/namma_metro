@@ -1,16 +1,21 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:namma_metro/common_widgets/components/checkTrains.dart';
 import 'package:namma_metro/common_widgets/components/fromTo.dart';
 import 'package:namma_metro/common_widgets/components/myseprator.dart';
-import 'package:namma_metro/common_widgets/components/normalElevatedButton.dart';
 import 'package:namma_metro/common_widgets/components/verificationButton.dart';
 import 'package:namma_metro/features/ticketBooking/confirmation.dart';
 
-class ticketBooking extends StatelessWidget {
-  const ticketBooking({Key? key}) : super(key: key);
+class ticketBooking extends StatefulWidget {
+  ticketBooking({Key? key}) : super(key: key);
 
+  @override
+  State<ticketBooking> createState() => _ticketBookingState();
+}
+
+int noOfticket = 10;
+
+class _ticketBookingState extends State<ticketBooking> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,7 +54,7 @@ class ticketBooking extends StatelessWidget {
                               buttonText: "One Way",
                               isIcon: false,
                               isoneSidedPadding: false,
-                              width: 165,
+                              width: MediaQuery.of(context).size.width * 0.4,
                               bgcolor: Theme.of(context)
                                   .colorScheme
                                   .primaryContainer,
@@ -57,10 +62,10 @@ class ticketBooking extends StatelessWidget {
                                   Theme.of(context).colorScheme.background),
                           VerificationButton(
                               widget: ticketBooking(),
-                              buttonText: "One Way",
+                              buttonText: "Two Way",
                               isIcon: false,
                               isoneSidedPadding: false,
-                              width: 165,
+                              width: MediaQuery.of(context).size.width * 0.4,
                               bgcolor: Theme.of(context).colorScheme.background,
                               fgcolor: Theme.of(context)
                                   .colorScheme
@@ -81,7 +86,16 @@ class ticketBooking extends StatelessWidget {
                             children: [
                               Row(
                                 children: [
-                                  Icon(Icons.remove_circle_outline),
+                                  GestureDetector(
+                                      onTap: () {
+                                        setState(() {
+                                          noOfticket = noOfticket - 1;
+                                          if (noOfticket <= 0) {
+                                            noOfticket = 1;
+                                          }
+                                        });
+                                      },
+                                      child: Icon(Icons.remove_circle_outline)),
                                   SizedBox(
                                     width: 5,
                                   ),
@@ -93,7 +107,7 @@ class ticketBooking extends StatelessWidget {
                                         borderRadius: BorderRadius.circular(8)),
                                     child: Center(
                                         child: Text(
-                                      "1",
+                                      noOfticket.toString(),
                                       style: TextStyle(
                                           fontSize: 16,
                                           fontWeight: FontWeight.w500),
@@ -102,7 +116,13 @@ class ticketBooking extends StatelessWidget {
                                   SizedBox(
                                     width: 5,
                                   ),
-                                  Icon(Icons.remove_circle_outline),
+                                  GestureDetector(
+                                      onTap: () {
+                                        setState(() {
+                                          noOfticket = noOfticket + 1;
+                                        });
+                                      },
+                                      child: Icon(Icons.add_circle_outline)),
                                 ],
                               ),
                             ],
