@@ -19,7 +19,6 @@ class _OnboardingState extends State<Onboarding> {
   final PageController controller = PageController();
   int currentPage = 0;
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
